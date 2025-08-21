@@ -1,0 +1,36 @@
+04/08/25
+Piscine C01
+
+ptr* saves and points to another memory address
+ptr is 8 bytes
+example:
+char c;
+char* ptr;
+
+c = L;
+ptr = &c; // Referencing
+*ptr = 'O'; /* dereferencing: this means that the pointer will go the address in the memory (for char c) 
+and change it's value to O (79 ASCII)*/
+
+/* ptr is a pointer that points to the memory address of c (&c = address of c) */
+
+A pointer can point to the address of a data type (referencing) 
+and it can also change the content of that data type (dereferencing)
+
+
+how to write a string (multiple characters):
+In C there's no string data type, so strings are pointer for the address of the first character:
+
+char *str;
+
+str = "LOL" 
+(str will ocupy 4 bytes of memory with  76 79 76 0 > L O L NULL in ASCII.
+This 0 is the null character not 0 character. It means the string if over. All strings have it in the end)
+
+*str is saving the address of the first character "L" and 
+it knows what follows and to keep reading until it reaches NULL
+
+Posso fazer:
+
+str = str + 1 e se fizer write(1, &str, 2) = OL // pointer arithmetics
+Ao somar 1 ao pointer disse ao pointer para ir a proxima address do char str.

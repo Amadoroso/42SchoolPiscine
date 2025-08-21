@@ -1,0 +1,13 @@
+13/08/25
+
+If you call function inside of a function remember that is like a different function. 
+So variables are not shared like other functions:
+
+
+int	f(int a, int b)
+{
+	int c;
+	int d;
+
+	c = f(a + 1, a + 2); // this f is treated as a new instance of f in the PC.
+}

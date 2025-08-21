@@ -1,0 +1,52 @@
+31/07/25
+Piscine C00
+
+1 byte = 8 bits
+1 byte can represent a number from 0-255
+each byte has a unique address
+
+CPU
+Makes basic calculations (+-)
+can copy bytes from one place from the RAM
+communicate with the I/O devices
+
+Compiling code = Transforming from readable language (coding language) to instructions that the CPU can understand
+
+Variables = Bytes in RAM to store data and make calculations
+Can be read and modified
+can manipulate bytes 1 by 1 or multiple groups of bytes
+
+
+Variables format specifiers
+Used with printf() to tell the compiler the type of data the variable is storing. (placeholder for the variable value)
+
+example:
+int myNum = 15;
+printf("%d", myNum) // outputs 15
+
+"%d" or "%i" = integer
+"%c" = character
+"%f" = float
+"%lf" = double
+\n = new line
+"%.2f" = float with only two decimal digits
+
+example:
+int myNum = 15;
+char myLetter = 'D';
+printf("My number is %d and my letter is %c", myNum, myLetter)
+
+To declare different variables of  the same type, separate by comma:
+int x, y, z;
+x = y = z = 50;
+printf("%d", x + y + z)
+
+printf("%zu\n", sizeof(nomevariavel)) diz o tamanho da variavel na memoria
+format spec. %zu porque a operacao sizeof retorna um size_t que e um unsigned int.
+
+to convert data types use:
+int a = 5, b = 2
+float sum = (float) a / b 
+printf("%f", sum)
+
+
